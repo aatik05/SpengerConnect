@@ -1,7 +1,6 @@
-function register() 
+function myFunction() 
 {
-    window.location.assign("kontoErstellen.html")
-    window.location.href = "kontoErstellen.html";
+
 }
 
 function login() 
