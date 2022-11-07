@@ -13,25 +13,25 @@
   </head>
   <body>
   
+  <div class="container-fluid">
   <div class="login-form">
     
       <h1>Registrieren</h1>
-      <div class="content">
-        <div class="input-field">
-          <input type="username" placeholder="Username" autocomplete="nope">
+      <form action="register2.html">
+
+            <input type="username" placeholder="Username" autocomplete="nope">
+            <input type="password" placeholder="Passwort" autocomplete="new-password">
+          
+          <a href="login.html" style="text-decoration:none" class="link">Schon ein Konto? Hier Einloggen</a>
+        
+        <div class="action">
+         
+         <button class="btn" onclick="document.location='register2.html'" type="submit">Nächster Schritt</button>
         </div>
-        <div class="input-field">
-          <input type="password" placeholder="Passwort" autocomplete="new-password">
-        </div>
-        <a href="login.html" style="text-decoration:none" class="link">Schon ein Konto? Hier Einloggen</a>
-      </div>
-      <div class="action">
-       
-       <button onclick="document.location='register2.html'" type="submit">Nächster Schritt</button>
-      </div>
-    
+      
+      </form>
   </div>
-  
+</div>
   
   </body>
   </html>

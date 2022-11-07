@@ -16,14 +16,14 @@ body
 {
   background: #fff;
   width: 500px;
-  margin: 65px auto;
+  margin: 200px auto;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
         flex-direction: column;
   border-radius: 10px;
-  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 25px rgb(227, 88, 105);
   text-align: center;
 }
 
@@ -33,14 +33,31 @@ body
   font-weight: 300;
 }
 
-.login-form .content 
+.login-form
 {
-  padding: 35px;
+  padding: 45px 155px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 10px;    
+}
+
+.login-form > form 
+{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .loginbutton
 {
   border-radius: 4px;
+}
+
+.login-form a
+{
+  margin: 15px;
+}
+
+.btn
+{
+  box-shadow: 0 2px 25px rgb(146, 141, 141);
 }
