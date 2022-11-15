@@ -24,13 +24,15 @@
     <div class="container-fluid">
       <div class="login-form">
         <h1>Login</h1>
-        <form  action="index.html" onsubmit="myFunction()">
-          <input type="text" placeholder="Username" id="usernameLogin"  />
-          <input type="text" placeholder="Passwort" autocomplete="new-password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
-          <a href="register1.html" style="text-decoration: none" class="link">Noch kein Konto? Hier registrieren</a>
+        <form  action="index.html" >
+          <input type="text" placeholder="Username" id="username"  />
+          <div id="shitusername"></div>
+          <input type="text" placeholder="Passwort" id="passwort" autocomplete="new-password"  />
+          <div id="shitpasswort"></div>
+          <a href="register.html" style="text-decoration: none" class="link">Noch kein Konto? Hier registrieren</a>
           <div class="action">
-            <!--<button id="registrieren" onclick="myFunction()" >Registrieren</button> -->
-            <button type="submit" class="btn" >Einloggen</button>
+            <button id="registrieren" onclick="daten()" >Einloggen</button>
+            
           </div>
         </form>
       </div>

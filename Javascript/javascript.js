@@ -1,6 +1,6 @@
 function myFunction() 
 {
-
+console.log("was mach ich?")
 }
 
 function login() 
