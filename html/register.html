@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css?family=Rubik:400,700"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <script src="javascript.js"></script>
+    <script src="Javascript/javascript.js"></script>
   </head>
   <body>
   
@@ -25,19 +25,22 @@
     <div class="login-form">
       <h1>Registrieren</h1>
 
-      <form action="index.html">
-        <input type="email" placeholder="Schul-Email" autocomplete="nope" />
+      <form>
+        <input type="email" placeholder="Schul-Email" id="schulemail" autocomplete="nope" />
 
-        <input type="text" placeholder="Vorname" autocomplete="nope" />
+        <input type="text" placeholder="Vorname" id="vorname" autocomplete="nope" />
 
-        <input type="text" placeholder="Nachname" autocomplete="nope" />
+        <input type="text" placeholder="Username" id="newusername" autocomplete="nope" />
 
+        <input type="text" placeholder="Nachname" id="nachname" autocomplete="nope" />
+
+        <input type="text" placeholder="Passwort" id="newpasswort"autocomplete="nope" />
         <a href="register1.html" style="text-decoration: none" class="link"
           >Zurück zum ersten Schritt</a
         >
 
         <div class="action">
-          <button class="btn" onclick="document.location='index.html'">
+          <button class="btn" type="button" onclick="registerdaten()">
             Konto fertig erstellen
           </button>
         </div>
