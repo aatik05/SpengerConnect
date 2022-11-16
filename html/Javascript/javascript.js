@@ -2,6 +2,7 @@ var paswvergl;
 var uservergl;
 var newuser;
 var newpasw;
+var newemail;
 function daten() 
 {
     var p;
@@ -40,12 +41,32 @@ console.log("christopgh mach mal magie");
 console.log(paswvergl, uservergl)
 }
 
+function neuedatenjuhuchristophfreudichpartyparty() {
+console.log(newuser, newpasw, newemail)
+}
+
 function registerdaten()
 {
     var u;
     var p;
     var e;
+    e = document.getElementById("schulemail").value;
     p = document.getElementById("newpasswort").value;
 u = document.getElementById("newusername").value;
-    if()
+let pattern = /[0-9]/;
+    if(pattern.test(u) && pattern.test(p) && p.length > 4 && p.length < 12 && u.length > 4 && u.length < 16 && e.includes("@") && e.includes(".")) {
+       newemail = e;
+       newpasw = p;
+       newuser = u;
+        neuedatenjuhuchristophfreudichpartyparty();
+        window.location.href = "index.html";
+
+    }
+    else {
+        
+        document.getElementById("shitnewpasw").innerHTML = "Passwort muss zwischen 4 und 12 Zeichen lang sein und eine Zahl beeinhalten."
+        document.getElementById("shitnewuser").innerHTML = "Username muss zwischen 4 und 16 Zeichen lang sein und min. eine Zahl beeinhalten."
+        document.getElementById("shitemail").innerHTML = "Bitte gültige Email eingeben"
+        
+    }
 }
