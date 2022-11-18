@@ -186,7 +186,7 @@ h2 {
   font-size: 36px; }
 
 .main {
-  background: #f8f8f8;
+  background: rgb(214, 70, 70);
   padding: 150px 0; }
 
 .clear {
@@ -196,7 +196,7 @@ body {
   font-size: 13px;
   line-height: 1.8;
   color: #222;
-  background: #f8f8f8;
+  background: rgb(214, 70, 70);
   font-weight: 400;
   font-family: Poppins; }
 
@@ -589,7 +589,12 @@ label.valid {
     margin-right: 0px;
     margin-bottom: 10px; } }
 
-    .register
+    @media (max-width:629px) {
+      img#register {
+        display: none;
+      }
+    }
+    #register
     {
       border-radius: 15px;
     }
