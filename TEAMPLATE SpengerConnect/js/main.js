@@ -74,7 +74,7 @@ function registerdaten() {
   }
 }
 
-function checkPassword5() {
+function checkDaten() {
   var password = document.getElementById("password").value;
   var special = 0;
   var specialCharacters = "!@#$%^&*()_+~|}{[]:;?><,./-=";
@@ -98,4 +98,7 @@ function checkPassword5() {
         "Password must contain a maximum of twenty characters";
     }
   }
+
+
+  
 }

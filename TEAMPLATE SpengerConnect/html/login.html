@@ -31,17 +31,17 @@
                         <form method="POST" class="register-form" id="login-form">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="username" id="your_name" placeholder="Username"/>
+                                <input type="text" name="username" id="username" placeholder="Username"/>
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="your_pass" id="passwordField" placeholder="Passwort"/>
+                                <input type="text" name="your_pass" id="passwort" placeholder="Passwort"/>
                             </div>
                             <!-- <div class="form-group form-button">
                                 <input type="submit" name="signin" id="signin" class="form-submit" value="Einloggen"/>
                             </div> -->
                             <div class="form-group form-button">
-                                <button name="signin" id="signin" class="form-submit" onclick="daten()">Einloggen</button>
+                                <button name="signin" id="signin" class="form-submit" onclick="checkDaten()">Einloggen</button>
                               </div>
                         </form>
                     </div>
