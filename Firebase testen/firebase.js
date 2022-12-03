@@ -5,6 +5,10 @@ import {
   collection,
   addDoc,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -19,27 +23,23 @@ const firebaseConfig = {
   appId: "1:501249531781:web:ba31e663e0101c465aaeec",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
+const auth = getAuth();
 
 // Write data to Firestore
-document.querySelector("#signup").addEventListener("click", () => {
-  const usr = document.getElementById("username").value;
-  const pss = document.getElementById("password").value;
-  writeData(usr, pss);
-});
+signup.addEventListener("click", (e) => {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-function writeData(usr, pss) {
-  try {
-    const docRef = addDoc(collection(db, "users"), {
-      username: usr,
-      password: pss
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      alert("User created");
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage);
     });
-    console.log("Document written with ID: ", docRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
-}
+});
