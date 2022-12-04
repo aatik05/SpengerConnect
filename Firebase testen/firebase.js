@@ -7,7 +7,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import {
   getAuth,
-  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -34,12 +34,14 @@ signup.addEventListener("click", (e) => {
 
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
+      // Signed in
       const user = userCredential.user;
-      alert("User created");
+      // ...
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      alert(errorMessage);
+      alert(errorCode);
+      // ..
     });
 });
