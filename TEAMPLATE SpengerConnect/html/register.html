@@ -13,11 +13,14 @@
     <!-- JS -->
     
     <script src="../js/main.js"></script>
-    <script src="../../Javascript/firebase.js"></script>
+ <!-- <script src="../../Javascript/firebase.js"></script> -->   
 
 </head>
 <body>
-
+    
+   
+    Ihr Browser kennt das HTML5-audio-Element noch nicht.
+    </audio> 
     <div class="main">
 
         <!-- Sign up form -->
@@ -28,30 +31,40 @@
                         <h2 class="form-title">Registrieren</h2>
                         <form class="register-form" id="register-form">
                             <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <label ><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="vorname" placeholder="Vorname"/>
+                                <div id="vornamealert" class="alert"></div>
                             </div>
+                            
                             <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <label ><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="nachname" placeholder="Nachname"/>
+                                <div id="nachnamealert" class="alert"></div>
                             </div>
+                            
                             <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <label ><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="username" id="username" placeholder="Username"/>
+                                <div id="usernamealert" class="alert"></div>
                             </div>
+                            
                             <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <label><i class="zmdi zmdi-email"></i></label>
                                 <input type="text" name="email" id="email" placeholder="Schul-Email"/>
+                                <div id="emailalert" class="alert"></div>
                             </div>
+                            
                             <div id="form-pass" class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <label ><i class="zmdi zmdi-lock"></i></label>
                                 <input type="text" name="pass" id="passwort" placeholder="Passwort"/>
+                                <div id="passwortalert" class="alert"></div>
                             </div>
+                            
                             <!-- <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Konto erstellen"/>
                             </div> -->
                             <div class="form-group form-button">
-                                <button  id="signin" class="form-submit" onclick="registerCheck()">Einloggen</button>
+                                <button  id="signin" class="form-submit" onclick="validSignUpData()">Einloggen</button>
                               </div>
                         </form>
                     </div>

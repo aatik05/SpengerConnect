@@ -15,3 +15,11 @@ function checkDaten () {
   firebaseRegisterCheck(vn, nn, em, un, pw);
 }
 
+function validSignUpData() {
+ 
+  window.location.href = "a";
+  
+  console.log("hahahahaCHRISTOPH ICH HAB EINEN FÜNFER AUF WMC ICH HAB KEINE LUSTE MEHR AUF DIESE SCHULE HILF MIR MAL BITTE");
+}
+
+
