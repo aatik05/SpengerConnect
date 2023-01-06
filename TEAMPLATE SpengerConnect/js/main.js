@@ -22,4 +22,14 @@ function validSignUpData() {
   console.log("hahahahaCHRISTOPH ICH HAB EINEN FÜNFER AUF WMC ICH HAB KEINE LUSTE MEHR AUF DIESE SCHULE HILF MIR MAL BITTE");
 }
 
+function reload(){
+console.log("s0s");
+}
 
+function profileDetails(){
+  console.log("sry christoph");
+}
+
+function fillProfil() {
+  console.log("on load ykkkkkkk");
+}

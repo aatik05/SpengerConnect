@@ -13,7 +13,7 @@
 </head>
     <title>Gimme Head Boji</title>
 </head>
-<body>
+<body onload="fillProfile()"> 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
       <a class="navbar-brand" href="#">
@@ -40,13 +40,16 @@
 
   <div class="row">
     <div class="col"></div>
-    <div class="col"><div class="container p-5 my-5 bg-dark text-white"> <img src="../images/sexyted.jpeg" width="200" height="200" alt="Cinque Terre" id="profile"> <h2 id="alter">26</h2> <h3 id="name">Hier Name Rein Vallah</h3>  </div></div>
+    <div class="col">
+      <div class="container p-5 my-5 bg-dark text-white rounded">
+         <img src="../images/sexyted.jpeg" width="200" height="200" alt="Cinque Terre" id="profile" class="rounded">
+         <h2 id="alter">26</h2> <h3 id="name">Hier Name Rein Vallah</h3> <h4 id="info"> wenn ich groß bin will ich wie atik sein xx</h4></div></div>
     <div class="col"> </div>
   </div> 
   
   <div class="row">
     <div class="col"></div>
-    <div class="col"><button type="button" class="btn-lg btn-dark">Iiiih</button> <button type="button" class="rightb btn-lg btn-dark">uiiii</button></div>
+    <div class="col"><button onclick="reload()" type="button" class="leftb btn-lg btn-dark">Pass</button> <button onclick="profileDetails()" type="button" class="rightb btn-lg btn-dark">Smash</button></div>
     <div class="col"></div>
   </div> 
 </body>
