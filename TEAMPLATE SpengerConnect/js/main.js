@@ -7,15 +7,34 @@ var username = document.getElementById("username");
 //wenn daten richtig sind dann datencorrect aufrufen, wenn falsch dann datenerror
 }
 function datenError() {
-  //wenn daten nicht richtig sind wird error message geliefert
+  alert("Username oder Password sind Falsch!");
 }
 
 function datenCorrect() {
   console.log("warum?");
-  window.location.replace("main.html");
+  window.open("main.html");
 }
 
-function validnUpData() {
-  
-  location.href="../html/main.html";
+
+//register
+function checkSignUp() {
+  var password=document.getElementById("newpassword");
+  var username=document.getElementById("newusername");
+  var email=document.getElementById("newemail");
+  var vorname=document.getElementById("newvorname");
+  var nachname=document.getElementById("newnachname");
+  //christoph check die daten ob gültige werte und speicher falls ja ... falls richtig ruf valid auf ansosnten error xoxo
 }
+
+function validSignUpData() {
+  //sollte auf konto erstellen weiterleiten aber die haben wir noch nicht einmal hahahahahahaykyk
+  console.log("warum?");
+  
+  document.location = "main.html";
+   window.open("main.html");
+}
+
+function SignUpError() {
+  alert("Bitte Gültige Werte eingeben.\nPassword muss min. 8 Zeichen lang sein und eine Zahl haben.\n Email muss eine gültige Email sein.\nUsername muss min 6 Zeichen Lang sein und noch nicht vergeben sein.");
+}
+
