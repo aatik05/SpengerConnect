@@ -1,35 +1,21 @@
-var paswvergl;
-var uservergl;
-var newuser;
-var newpasw;
-var newemail;
-var newvorname;
-var newnachname;
+//login:
 
-function checkDaten () {
-  var vn = document.getElementById("vorname");
-  var nn = document.getElementById("nachname");
-  var em = document.getElementById("email");
-  var un = document.getElementById("username");
-  var pw = document.getElementById("passwort");
-  firebaseRegisterCheck(vn, nn, em, un, pw);
+function checkDaten() {
+var password = document.getElementById("password"); 
+var username = document.getElementById("username");
+//Christoph vergleich hier die werte mit denen aus datenbank yk
+//wenn daten richtig sind dann datencorrect aufrufen, wenn falsch dann datenerror
+}
+function datenError() {
+  //wenn daten nicht richtig sind wird error message geliefert
 }
 
-function validSignUpData() {
- 
-  window.location.href = "a";
+function datenCorrect() {
+  console.log("warum?");
+  window.location.replace("main.html");
+}
+
+function validnUpData() {
   
-  console.log("hahahahaCHRISTOPH ICH HAB EINEN FÜNFER AUF WMC ICH HAB KEINE LUSTE MEHR AUF DIESE SCHULE HILF MIR MAL BITTE");
-}
-
-function reload(){
-console.log("s0s");
-}
-
-function profileDetails(){
-  console.log("sry christoph");
-}
-
-function fillProfil() {
-  console.log("on load ykkkkkkk");
+  location.href="../html/main.html";
 }

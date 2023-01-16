@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>!TEAMPLATE! Simple Login Form Example</title>
+    <title>SpengerConnect</title>
     <link rel="icon" href="../favicon/index.ico">
     <!-- Font Icon -->
     <link rel="stylesheet" href="../fonts/material-icon/css/material-design-iconic-font.min.css">
     <!-- Main css -->
     <link rel="stylesheet" href="../css/style.css">
     <!-- JS -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    
+    <script src="../js/main.js"></script>
 </head>
 <body>
 
@@ -28,21 +28,21 @@
 
                     <div class="signin-form">
                         <h2 class="form-title">Login</h2>
-                        <form method="POST" class="register-form" id="login-form">
+                        <form  class="register-form" id="login-form">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="username" id="username" placeholder="Username"/>
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="your_pass" id="passwort" placeholder="Passwort"/>
+                                <input type="text" name="your_pass" id="password" placeholder="Passwort"/>
                             </div>
                             <!-- <div class="form-group form-button">
                                 <input type="submit" name="signin" id="signin" class="form-submit" value="Einloggen"/>
                             </div> -->
-                            <div class="form-group form-button">
-                                <button name="signin" id="signin" class="form-submit" onclick="checkDaten()">Einloggen</button>
-                              </div>
+                            
+                                <button onclick="datenCorrect()" id="signin" class="form-submit" >Einloggen</button>
+                              
                         </form>
                     </div>
                 </div>
