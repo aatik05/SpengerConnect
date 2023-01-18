@@ -7,7 +7,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
