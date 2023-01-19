@@ -107,3 +107,52 @@ function bildHochladen() {
   console.log(img);
   document.getElementById("IMAGE")=img;
 }
+
+//main seite
+function datenEinfügen(){
+let random = Math.floor(Math.random() * 6);
+if(random <= 1) {
+document.getElementById("img1").src="../images/mickeymouse1.jpg";
+document.getElementById("img2").src="../images/mickeymouse2.jpg";
+document.getElementById("img3").src="../images/mickeymouse3.jpg";
+document.getElementById("alter").innerHTML="31";
+document.getElementById("name").innerHTML="Mickey Mouse";
+document.getElementById("info").innerHTML="Hallo, ich bin Mickey. Ich kann gut pfeifen und mag Hunde und so..."
+}
+if(random <= 2 && random > 1){
+  document.getElementById("img1").src="../images/luckyluke1.jpg";
+  document.getElementById("img2").src="../images/luckyluke2.jpg";
+  document.getElementById("img3").src="../images/luckyluke3,jpg.jpg";
+  document.getElementById("alter").innerHTML="26";
+  document.getElementById("name").innerHTML="Lucky Luke"
+  document.getElementById("info").innerHTML="Ich schieß gut. Und mein Pferd kann reden. Das cool so..."
+}
+if(random <= 3 && random > 2){
+  document.getElementById("img1").src="../images/donaldduck1.jpg";
+  document.getElementById("img2").src="../images/donaldduck2.jpg";
+  document.getElementById("img3").src="../images/donaldduck3.jpg";
+  document.getElementById("alter").innerHTML="34";
+  document.getElementById("name").innerHTML="Donald Duck"
+  document.getElementById("info").innerHTML="Ich muss 3 Bengel erziehen und mein Onkel verwendet mich als Sklave..."
+}
+if(random <= 4 && random > 3){
+  document.getElementById("img1").src="../images/obelix1.jpg";
+document.getElementById("img2").src="../images/obelix2.jpg";
+document.getElementById("img3").src="../images/obelix3.jpg";
+document.getElementById("alter").innerHTML="30";
+document.getElementById("name").innerHTML="Obelix";
+document.getElementById("info").innerHTML="Wer hat gesagt, dass ich dick bin?"
+}
+if(random > 4){
+  document.getElementById("img1").src="../images/tim1.jpg";
+document.getElementById("img2").src="../images/tim2.jpg";
+document.getElementById("img3").src="../images/tim3.jpg";
+document.getElementById("alter").innerHTML="Tim";
+document.getElementById("name").innerHTML="21"
+document.getElementById("info").innerHTML="Ich mag Hunde und hab eine Zipfi Frisur..."
+}
+}
+
+function profileDetails() {
+  alert("Email-Addresse:\nexamplemail@spg.com");
+}
