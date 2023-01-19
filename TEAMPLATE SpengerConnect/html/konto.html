@@ -38,12 +38,12 @@
     </div>
   </nav>
 
-  <form onsubmit="dateiauswahl()" method="post" enctype="multipart/form-data">
+  <form method="post" enctype="multipart/form-data">
     <label>Wählen Sie die hochzuladenden Dateien von Ihrem Rechner aus:
-      <input name="datei[]" type="file" multiple> 
+      <input id="bild" name="datei" type="file" multiple> 
     </label>  
-    <button>hochladen</button>
+    <button onclick="bildHochladen()">hochladen</button>
 </form>
-
+<img id="IMAGE" src=""/>
 </body>
 </html>

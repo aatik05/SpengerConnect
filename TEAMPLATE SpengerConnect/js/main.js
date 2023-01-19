@@ -26,8 +26,12 @@ function datenError() {
 }
 
 function datenCorrect() {
-  console.log("warum?");
+  
   window.open("main.html");
+}
+
+function passwordVergessen() {
+//password vergessen methode
 }
 
 //register
@@ -82,10 +86,10 @@ function createUser(email, password) {
 }
 
 function validSignUpData() {
-  //sollte auf konto erstellen weiterleiten aber die haben wir noch nicht einmal hahahahahahaykyk
+  
   console.log("warum?");
 
-  document.location = "main.html";
+  document.location = "konto.html";
   window.open("main.html");
 }
 
@@ -96,34 +100,10 @@ function SignUpError() {
 }
 
 //konto
-function dateiauswahl(evt) {
-  var dateien = evt.target.files; // FileList object
 
-  // Auslesen der gespeicherten Dateien durch Schleife
-  for (var i = 0, f; (f = dateien[i]); i++) {
-    // nur TXT-Dateien
-    if (!f.type.match("text/plain")) {
-      continue;
-    }
-
-    var reader = new FileReader();
-
-    reader.onload = (function (theFile) {
-      return function (e) {
-        // erzeuge "Thumbnails"
-        var vorschau = document.createElement("p");
-        vorschau.className = "thumb";
-        vorschau.src = e.target.result;
-        vorschau.title = theFile.name;
-        document.getElementById("list").insertBefore(vorschau, null);
-      };
-    })(f);
-
-    // Klartext mit Zeichenkodierung UTF-8 auslesen.
-    reader.readAsText(f, utf8);
-  }
+function bildHochladen() {
+  
+  var img = document.getElementById("bild")
+  console.log(img);
+  document.getElementById("IMAGE")=img;
 }
-// Auf neue Auswahl reagieren und gegeenenfalls Funktion dateiauswahl neu ausführen.
-document
-  .getElementById("files")
-  .addEventListener("change", dateiauswahl, false);
