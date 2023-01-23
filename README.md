@@ -36,8 +36,8 @@ localhost/SpengerConnect
 Zum Einloggen nur in die Felder Email und Passwort die Daten eingeben.
 
 Vorhandene Daten zum Ausprobieren:
-E-mail:   beispiel@gmail.com
-Passwort: Beispiel123
+<br /> E-mail:   beispiel@gmail.com
+<br /> Passwort: Beispiel123
 
 ## Kontakt
 
