@@ -31,7 +31,7 @@ localhost/SpengerConnect
 
 ## Use Case
 
-![image](https://user-images.githubusercontent.com/113604671/214077253-abb83a23-7bf7-4948-bba0-7062f9cb6ef1.png)
+![image](https://user-images.githubusercontent.com/113604671/214079938-e51fa26a-1881-469f-a263-e3d456944fbd.png)
 
 ## Kontakt
 
