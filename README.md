@@ -2,57 +2,29 @@
 
 SpengerConnect soll uns Schüler intern miteinander verbinden. Häufig ist es so, dass die meisten Schüler aus einer Abteilung, keine Schüler aus der anderen Abteilung kennen. Dies wollen wir ändern mit SpengerConnect.
 
-## Getting Started
+## Wie kann ich es testen?
 
-### Dependencies
+### 1. Schritt
+Zuerst müssen Sie sich XAMPP installieren. Hierfür klicken sie den Link an https://www.apachefriends.org/de/index.html. Danach wählen Sie Ihr Betriebsystem aus und laden die Installationsdatei runter (siehe Bild unten).
+![image](https://user-images.githubusercontent.com/113604671/214062980-dc2fc235-a998-4434-be01-d64abc3c161c.png)
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+### 2. Schritt: Installationsdatei ausführen
+Die Installationsdatei ausführen.
 
-### Installing
+### 3. Schritt: Apache starten
+XAMPP öffnen. Bei Apache auf "Start" drücken (siehe Bild unten).
+![image](https://user-images.githubusercontent.com/113604671/214065336-65f1f48d-8aa5-457d-8988-27e08e9222e8.png)
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
+### 4.Schritt: Repository klonen
 ```
-code blocks for commands
+git clone https://github.com/aatik05/SpengerConnect.git
 ```
 
-## Help
+### 5. Schritt: Inhalt vom Repository in den "htdocs" Ordner rein kopieren
+XAMPP erstellt von selbst aus einen "htdocs" Ordner. In diesem Ordner den ganzen Inhalt des Repository's reinkopieren.
 
-Any advise for common problems or issues.
+### 6. Schritt
+Auf einem belibigen Browser localhost öffnen wie unten.
 ```
-command to run if program contains helper info
+localhost/SpengerConnect
 ```
-
-## Authors
-
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
