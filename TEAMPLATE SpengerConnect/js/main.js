@@ -155,4 +155,6 @@ document.getElementById("info").innerHTML="Ich mag Hunde und hab eine Zipfi Fris
 
 function profileDetails() {
   alert("Email-Addresse:\nexamplemail@spg.com");
+  window.setTimeout(datenEinfügen(), 10000);
+
 }
