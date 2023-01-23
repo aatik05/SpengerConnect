@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,8 @@
     <link rel="stylesheet" href="../fonts/material-icon/css/material-design-iconic-font.min.css">
     <!-- Main css -->
     <link rel="stylesheet" href="../css/style.css">
-    <!-- JS -->
-    
-    <script src="../js/main.js"></script>
 </head>
+
 <body>
 
     <div class="main">
@@ -23,27 +22,29 @@
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img id="register" src="../images/SPG-Connect.jpeg" alt="sing up image"></figure>
-                        <a href="register.html" style="text-decoration: none; color:#73b5e0; font-weight: bold;" class="signup-image-link">Konto erstellen</a>
+                        <a href="register.html" style="text-decoration: none; color:#73b5e0; font-weight: bold;"
+                            class="signup-image-link">Konto erstellen</a>
                     </div>
 
                     <div class="signin-form">
                         <h2 class="form-title">Login</h2>
-                        <form  class="register-form" id="login-form">
+                        <form class="register-form" id="login-form">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="username" id="username" placeholder="Username"/>
+                                <input type="text" name="username" id="email" placeholder="E-Mail" />
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="your_pass" id="password" placeholder="Passwort"/>
+                                <input type="text" name="your_pass" id="password" placeholder="Passwort" />
                             </div>
                             <!-- <div class="form-group form-button">
                                 <input type="submit" name="signin" id="signin" class="form-submit" value="Einloggen"/>
                             </div> -->
-                            
-                                <button onclick="datenCorrect()" id="signin" class="form-submit" >Einloggen</button>
-                                <br>
-                                <button onclick="passwordVergessen()" id="signin" class="form-submit" >Passwort vergessen?</button>
+
+                            <button id="signinButton" class="form-submit">Einloggen</button>
+                            <br>
+                            <button id="vergessen" class="form-submit">Passwort
+                                vergessen?</button>
                         </form>
                     </div>
                 </div>
@@ -51,5 +52,43 @@
         </section>
 
     </div>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js'
+
+        // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js'
+
+        // Add Firebase products that you want to use
+        import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js'
+        import { getFirestore, addDoc, collection } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js'
+        import { getDatabase, ref, set, child, get } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js'
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCofWK1H89D0H9vcr4HanbpQHRL2Va7MGA",
+            authDomain: "spengerconnect-bcad2.firebaseapp.com",
+            databaseURL: "https://spengerconnect-bcad2-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "spengerconnect-bcad2",
+            storageBucket: "spengerconnect-bcad2.appspot.com",
+            messagingSenderId: "501249531781",
+            appId: "1:501249531781:web:ba31e663e0101c465aaeec",
+        };
+
+        const app = initializeApp(firebaseConfig);
+        //const db = getFirestore(app);
+        const database = getDatabase();
+        const auth = getAuth();
+
+        signinButton.addEventListener("click", function () {
+            var emailTest = document.getElementById("email").value;
+            var passwordTest = document.getElementById("password").value;
+            singInTest(emailTest, passwordTest);
+            }
+        );
+        function validSignUpData() {
+            document.location = "main.html";
+            window.open("main.html");
+        }
+    </script>
 </body>
+
 </html>
