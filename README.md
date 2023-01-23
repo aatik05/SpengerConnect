@@ -15,7 +15,7 @@ Die Installationsdatei ausführen.
 XAMPP öffnen. Bei Apache auf "Start" drücken (siehe Bild unten).
 ![image](https://user-images.githubusercontent.com/113604671/214065336-65f1f48d-8aa5-457d-8988-27e08e9222e8.png)
 
-### 4.Schritt: Repository klonen
+### 4. Schritt: Repository klonen
 ```
 git clone https://github.com/aatik05/SpengerConnect.git
 ```
@@ -36,8 +36,8 @@ localhost/SpengerConnect
 Zum Einloggen nur in die Felder Email und Passwort die Daten eingeben.
 
 Vorhandene Daten zum Ausprobieren:
-E-mail:   beispiel@gmail.com
-Passwort: Beispiel123
+<br /> E-mail:   beispiel@gmail.com
+<br /> Passwort: Beispiel123
 
 ## Kontakt
 
