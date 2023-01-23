@@ -28,3 +28,16 @@ Auf einem belibigen Browser localhost öffnen wie unten.
 ```
 localhost/SpengerConnect
 ```
+
+## Use Case
+
+![image](https://user-images.githubusercontent.com/113604671/214077253-abb83a23-7bf7-4948-bba0-7062f9cb6ef1.png)
+
+## Kontakt
+
+Name                    | Email
+----------------------- | -------------
+Mohammad Atikur Rahman  | rah22182@spengergasse.at
+Christoph Heinzl        | hei22568@spengergasse.at
+Bruno Erik Refenner     | ref22234@spengergasse.at
+
