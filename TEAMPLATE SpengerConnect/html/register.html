@@ -12,7 +12,7 @@
     <!-- Main css -->
     <link rel="stylesheet" href="../css/style.css">
     <!-- JS -->
-    <script src="../js/main.js"></script>
+
 
     <!-- <script src="../../Javascript/firebase.js"></script> -->
 
@@ -30,7 +30,7 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Registrieren</h2>
-                        <form class="register-form" id="register-form" onsubmit="validSignUpData()">
+                        <form class="register-form" id="register-form">
                             <div class="form-group">
                                 <label><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="newvorname" placeholder="Vorname" />
@@ -65,7 +65,7 @@
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Konto erstellen"/>
                             </div> -->
                             <div class="form-group form-button">
-                                <button type="submit" id="signin" class="form-submit" onclick="checkSignUp()">Register</button>
+                                <button type="button" id="signin" class="form-submit">Register</button>
                             </div>
                         </form>
                     </div>
@@ -79,7 +79,6 @@
         </section>
     </div>
 
-
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js'
 
@@ -87,12 +86,14 @@
         import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js'
 
         // Add Firebase products that you want to use
-        import { getAuth } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js'
-        import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js'
+        import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js'
+        import { getFirestore, addDoc, collection } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js'
+        import { getDatabase, ref, set, child, get } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js'
 
         const firebaseConfig = {
             apiKey: "AIzaSyCofWK1H89D0H9vcr4HanbpQHRL2Va7MGA",
             authDomain: "spengerconnect-bcad2.firebaseapp.com",
+            databaseURL: "https://spengerconnect-bcad2-default-rtdb.europe-west1.firebasedatabase.app",
             projectId: "spengerconnect-bcad2",
             storageBucket: "spengerconnect-bcad2.appspot.com",
             messagingSenderId: "501249531781",
@@ -100,9 +101,114 @@
         };
 
         const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+        //const db = getFirestore(app);
+        const database = getDatabase();
         const auth = getAuth();
-        defineAuth(auth);
+
+        //register
+        const newUser = {
+            username: "myusername",
+            email: "myemail@example.com",
+            firstName: "John",
+            lastName: "Doe",
+            password: "mypassword"
+        };
+
+        signin.addEventListener("click", function () {
+            var password = document.getElementById("newpassword").value;
+            var username = document.getElementById("newusername").value;
+            var email = document.getElementById("newemail").value;
+            var vorname = document.getElementById("newvorname").value;
+            var nachname = document.getElementById("newnachname").value;
+            //christoph check die daten ob gültige werte und speicher falls ja ... falls richtig ruf valid auf ansosnten error xoxo
+            //Passowrt mindestens 8 Zeichen:
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (password.length < 8 || !/\d/.test(password)) {
+                SignUpError();
+                exit(0);
+            } else if (username.length <= 6) {
+                alert(username.length);
+                SignUpError();
+                exit(0);
+            } else if (!emailRegex.test(email)) {
+                alert("Test3");
+                SignUpError();
+                exit(0);
+            } else if (nachname.length <= 1 || vorname.length <= 1) {
+                alert("Test4");
+                SignUpError();
+                exit(0);
+            } else {
+                const dbRef = ref(getDatabase());
+                const db = getDatabase();
+                var valueRef = database.ref("users");
+                valueRef.once(username, function (snapshot) {
+                    if (snapshot.exists()) {
+                        console.log("Value exists in database");
+                    } else {
+                        console.log("Value does not exist in database");
+                    }
+                });
+
+
+
+
+                createUserWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                        // Signed in 
+                        const user = userCredential.user;
+
+                        writeUserData();
+                        function writeUserData() {
+                            set(ref(db, 'users/' + username), {
+                                username: username,
+                                email: email,
+                                vorname: vorname,
+                                nachname: nachname,
+                            });
+                        }
+
+                    })
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+                        if (errorCode == "auth/email-already-in-use") {
+                            alert("Another account is already using this email");
+                        }
+                    });
+            };
+        }
+        );
+
+
+        /*
+        
+
+        function createUser(email, password) {
+            auth.createUserWithEmailAndPassword(email, password)
+                .then(function (response) {
+                    console.log("User created successfully", response);
+                    alert("123");
+                })
+                .catch(function (error) {
+                    console.error("Error creating user: ", error);
+                    alert("456");
+                });
+        }
+        */
+        function validSignUpData() {
+            //sollte auf konto erstellen weiterleiten aber die haben wir noch nicht einmal hahahahahahaykyk
+            console.log("warum?");
+
+            document.location = "main.html";
+            window.open("main.html");
+        }
+
+        function SignUpError() {
+            alert(
+                "Bitte Gültige Werte eingeben.\nPassword muss min. 8 Zeichen lang sein und eine Zahl haben.\n Email muss eine gültige Email sein.\nUsername muss min 6 Zeichen Lang sein und noch nicht vergeben sein."
+            );
+        }
     </script>
 </body>
 
