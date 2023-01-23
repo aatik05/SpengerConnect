@@ -4,42 +4,39 @@ SpengerConnect soll uns Schüler intern miteinander verbinden. Häufig ist es so
 
 ## Wie kann ich es testen?
 
-### 1. Schritt
-Zuerst müssen Sie sich XAMPP installieren. Hierfür klicken sie den Link an https://www.apachefriends.org/de/index.html. Danach wählen Sie Ihr Betriebsystem aus und laden die Installationsdatei runter (siehe Bild unten).
-![image](https://user-images.githubusercontent.com/113604671/214062980-dc2fc235-a998-4434-be01-d64abc3c161c.png)
+### Requierements: Apache WebServer 
+Damit unser Projekt in seiner Volle Funktioniert braucht man einen Apache WebServer. 
+Der Apache WebServer muss also gestartet sein bevor man mit den weiteren Schritten weitermachen kann.
 
-### 2. Schritt: Installationsdatei ausführen
-Die Installationsdatei ausführen.
-
-### 3. Schritt: Apache starten
-XAMPP öffnen. Bei Apache auf "Start" drücken (siehe Bild unten).
-![image](https://user-images.githubusercontent.com/113604671/214065336-65f1f48d-8aa5-457d-8988-27e08e9222e8.png)
-
-### 4. Schritt: Repository klonen
+### 1. Schritt: Repository klonen
+Unser Repository klonen mit dem command:
 ```
 git clone https://github.com/aatik05/SpengerConnect.git
 ```
 
-### 5. Schritt: Inhalt vom Repository in den "htdocs" Ordner rein kopieren
-XAMPP erstellt von selbst aus einen "htdocs" Ordner. In diesem Ordner den ganzen Inhalt des Repository's reinkopieren.
+### 2. Schritt: Inhalt vom Repository in den richtigen Ordner kopieren
+Die Inhalte des Ordners müssen in den Apache WebServer Ordner reinkopiert werden oder können direkt dorthin geklont werden.
 
-### 6. Schritt
-Auf einem belibigen Browser localhost öffnen wie unten.
+### 3. Schritt
+Dann in dem Browser ihres vertrauens in die Searchbar folgenden command eingeben:
+Dieser sollte Sie direkt zu der Register Seite bringen.
 ```
-localhost/SpengerConnect
+localhost/SpengerConnect/html/register.html
 ```
 
 ## Use Case
 
 ![image](https://user-images.githubusercontent.com/113604671/214079938-e51fa26a-1881-469f-a263-e3d456944fbd.png)
 
-Zum Einloggen nur in die Felder Email und Passwort die Daten eingeben.
+Zum Einloggen nur Daten in die E-Mail und Passwort Felder eingeben, zum Registrieren in alle Felder.
 
-Vorhandene Daten zum Ausprobieren:
+Vorhandene Daten zum Log-In Ausprobieren:
 <br /> E-mail:   beispiel@gmail.com
 <br /> Passwort: Beispiel123
 
+Danach wird man auf die Main Seite weitergeleitet wenn man die richtigen Daten eingibt oder es kommt eine Fehlermeldung wenn man falsche Daten eingibt.
 ## Kontakt
+Bei  Fragen stehen wir gerne zur Verfügung.
 
 Name                    | Email
 ----------------------- | -------------
