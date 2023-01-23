@@ -33,6 +33,12 @@ localhost/SpengerConnect
 
 ![image](https://user-images.githubusercontent.com/113604671/214079938-e51fa26a-1881-469f-a263-e3d456944fbd.png)
 
+Zum Einloggen nur in die Felder Email und Passwort die Daten eingeben.
+
+Vorhandene Daten zum Ausprobieren:
+E-mail:   beispiel@gmail.com
+Passwort: Beispiel123
+
 ## Kontakt
 
 Name                    | Email
