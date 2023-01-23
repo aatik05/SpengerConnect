@@ -1,10 +1,6 @@
 # SpengerConnect
 
-Dient dazu Spengergassen Schüler intern zu verbinden.
-
-## Description
-
-An in-depth paragraph about your project and overview of use.
+SpengerConnect soll uns Schüler intern miteinander verbinden. Häufig ist es so, dass die meisten Schüler aus einer Abteilung, keine Schüler aus der anderen Abteilung kennen. Dies wollen wir ändern mit SpengerConnect.
 
 ## Getting Started
 
