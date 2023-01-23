@@ -76,14 +76,25 @@
         const app = initializeApp(firebaseConfig);
         //const db = getFirestore(app);
         const database = getDatabase();
-        const auth = getAuth();
 
+        const auth = getAuth();
         signinButton.addEventListener("click", function () {
             var emailTest = document.getElementById("email").value;
             var passwordTest = document.getElementById("password").value;
-            singInTest(emailTest, passwordTest);
-            }
-        );
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                })
+                .catch((error) => {
+                    if(error.code == "auth/network-request-failed")
+                    {
+                        alert(error.code)
+                    }
+                });
+        });
+
+
         function validSignUpData() {
             document.location = "main.html";
             window.open("main.html");

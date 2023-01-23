@@ -1,0 +1,16 @@
+body{
+ background-color: rgb(214, 70, 70);
+}
+
+.rightb{
+    margin-left: 222px;
+}
+
+.leftb{
+    margin-left: 60px;
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
